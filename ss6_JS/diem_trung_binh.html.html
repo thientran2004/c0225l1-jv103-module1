@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>diem_trung_binh.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+diem_trung_binh.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+
+<span class="s0">&lt;p&gt; </span><span class="s1">Mon Vat Ly:</span><span class="s0">&lt;/p&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">id</span><span class="s3">=&quot;ly&quot; </span><span class="s2">type</span><span class="s3">=&quot;text&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;p&gt; </span><span class="s1">Mon Hoa Hoc:</span><span class="s0">&lt;/p&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">id</span><span class="s3">=&quot;hoa&quot; </span><span class="s2">type</span><span class="s3">=&quot;text&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;p&gt; </span><span class="s1">Mon Sinh Hoc:</span><span class="s0">&lt;/p&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">id</span><span class="s3">=&quot;sinh&quot; </span><span class="s2">type</span><span class="s3">=&quot;text&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;button&quot; </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">tinhDiemTrungBinh()</span><span class="s3">&quot; </span><span class="s2">value</span><span class="s3">=&quot;submit&quot; </span><span class="s2">id</span><span class="s3">=&quot;Tong&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;p&gt; </span><span class="s1">Ket Qua: </span><span class="s0">&lt;/p&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">id</span><span class="s3">=&quot;Ket Qua&quot; </span><span class="s2">type</span><span class="s3">=&quot;text&quot;</span><span class="s0">&gt;</span>
+
+
+<span class="s0">&lt;script&gt;</span>
+    <span class="s4">function </span><span class="s1">tinhDiemTrungBinh() {</span>
+        <span class="s4">let </span><span class="s1">ly = +document.getElementById(</span><span class="s3">&quot;ly&quot;</span><span class="s1">).value;</span>
+        <span class="s4">let </span><span class="s1">hoa = +document.getElementById(</span><span class="s3">&quot;hoa&quot;</span><span class="s1">).value;</span>
+        <span class="s4">let </span><span class="s1">sinh = +document.getElementById(</span><span class="s3">&quot;sinh&quot;</span><span class="s1">).value;</span>
+        <span class="s4">let </span><span class="s1">tongDiem = ly + hoa + sinh;</span>
+        <span class="s4">let </span><span class="s1">tong = tongDiem / </span><span class="s5">3</span><span class="s1">;</span>
+        <span class="s1">document.getElementById(</span><span class="s3">&quot;Ket Qua&quot;</span><span class="s1">).value = tong;</span>
+    <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+</pre>
+</body>
+</html>
