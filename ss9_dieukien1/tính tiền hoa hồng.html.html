@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>tính tiền hoa hồng.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+.s5 { color: #2aacb8;}
+.s6 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+tính tiền hoa hồng.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">tính tiền hoa hồng</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;h2&gt;</span><span class="s1">Tính Hoa Hồng Dựa Trên Doanh Số Bán Hàng</span><span class="s0">&lt;/h2&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;number&quot; </span><span class="s2">id</span><span class="s3">=&quot;salesInput&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;Nhập doanh số bán hàng&quot; </span><span class="s0">/&gt;</span>
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">calculateCommission()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Tính Hoa Hồng</span><span class="s0">&lt;/button&gt;</span>
+<span class="s0">&lt;p </span><span class="s2">id</span><span class="s3">=&quot;result&quot;</span><span class="s0">&gt;&lt;/p&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+  <span class="s4">function </span><span class="s1">calculateCommission() {</span>
+    <span class="s4">const </span><span class="s1">sales = parseFloat(document.getElementById(</span><span class="s3">'salesInput'</span><span class="s1">).value);</span>
+    <span class="s4">const </span><span class="s1">resultElement = document.getElementById(</span><span class="s3">'result'</span><span class="s1">);</span>
+
+    <span class="s4">if </span><span class="s1">(isNaN(sales) || sales &lt; </span><span class="s5">0</span><span class="s1">) {</span>
+      <span class="s1">resultElement.textContent = </span><span class="s3">&quot;Vui lòng nhập một doanh số hợp lệ.&quot;</span><span class="s1">;</span>
+      <span class="s4">return</span><span class="s1">;</span>
+    <span class="s1">}</span>
+
+    <span class="s4">let </span><span class="s1">commissionRate;</span>
+
+    <span class="s4">if </span><span class="s1">(sales &lt; </span><span class="s5">10000</span><span class="s1">) {</span>
+      <span class="s1">commissionRate = </span><span class="s5">0.05</span><span class="s1">; </span><span class="s6">// 5%</span>
+    <span class="s1">} </span><span class="s4">else if </span><span class="s1">(sales &gt;= </span><span class="s5">10000 </span><span class="s1">&amp;&amp; sales &lt;= </span><span class="s5">20000</span><span class="s1">) {</span>
+      <span class="s1">commissionRate = </span><span class="s5">0.07</span><span class="s1">; </span><span class="s6">// 7%</span>
+    <span class="s1">} </span><span class="s4">else </span><span class="s1">{</span>
+      <span class="s1">commissionRate = </span><span class="s5">0.10</span><span class="s1">; </span><span class="s6">// 10%</span>
+    <span class="s1">}</span>
+
+    <span class="s4">const </span><span class="s1">commission = sales * commissionRate;</span>
+    <span class="s1">resultElement.textContent = </span><span class="s3">`Hoa hồng nhận được: </span><span class="s1">${commission.toFixed(</span><span class="s5">2</span><span class="s1">)} </span><span class="s3">VNĐ`</span><span class="s1">;</span>
+  <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>

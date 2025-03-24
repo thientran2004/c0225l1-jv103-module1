@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>máy tính đơn giản.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+.s5 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+máy tính đơn giản.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">máy tính</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;calculator&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;display&quot; </span><span class="s2">disabled </span><span class="s0">/&gt;</span>
+    <span class="s0">&lt;div&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">7</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">7</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">8</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">8</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">9</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">9</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">setOperation(</span><span class="s3">'+'</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">+</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;div&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">4</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">4</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">5</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">5</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">6</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">6</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">setOperation(</span><span class="s3">'-'</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">-</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;div&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">1</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">1</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">2</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">2</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">3</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">3</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">setOperation(</span><span class="s3">'*'</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">*</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+    <span class="s0">&lt;div&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">appendNumber(</span><span class="s4">0</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">0</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">calculate()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">=</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">setOperation(</span><span class="s3">'/'</span><span class="s1">)</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">/</span><span class="s0">&lt;/button&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/div&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+    <span class="s5">let </span><span class="s1">currentInput = </span><span class="s3">''</span><span class="s1">;</span>
+    <span class="s5">let </span><span class="s1">operation = </span><span class="s3">''</span><span class="s1">;</span>
+    <span class="s5">let </span><span class="s1">previousInput = </span><span class="s3">''</span><span class="s1">;</span>
+
+    <span class="s5">function </span><span class="s1">appendNumber(number) {</span>
+        <span class="s1">currentInput += number;</span>
+        <span class="s1">updateDisplay();</span>
+    <span class="s1">}</span>
+
+    <span class="s5">function </span><span class="s1">setOperation(op) {</span>
+        <span class="s5">if </span><span class="s1">(currentInput === </span><span class="s3">''</span><span class="s1">) </span><span class="s5">return</span><span class="s1">;</span>
+        <span class="s5">if </span><span class="s1">(previousInput !== </span><span class="s3">''</span><span class="s1">) {</span>
+            <span class="s1">calculate();</span>
+        <span class="s1">}</span>
+        <span class="s1">operation = op;</span>
+        <span class="s1">previousInput = currentInput;</span>
+        <span class="s1">currentInput = </span><span class="s3">''</span><span class="s1">;</span>
+    <span class="s1">}</span>
+
+    <span class="s5">function </span><span class="s1">calculate() {</span>
+        <span class="s5">let </span><span class="s1">result;</span>
+        <span class="s5">const </span><span class="s1">prev = parseFloat(previousInput);</span>
+        <span class="s5">const </span><span class="s1">current = parseFloat(currentInput);</span>
+        <span class="s5">if </span><span class="s1">(isNaN(prev) || isNaN(current)) </span><span class="s5">return</span><span class="s1">;</span>
+        <span class="s5">switch </span><span class="s1">(operation) {</span>
+            <span class="s5">case </span><span class="s3">'+'</span><span class="s1">:</span>
+                <span class="s1">result = prev + current;</span>
+                <span class="s5">break</span><span class="s1">;</span>
+            <span class="s5">case </span><span class="s3">'-'</span><span class="s1">:</span>
+                <span class="s1">result = prev - current;</span>
+                <span class="s5">break</span><span class="s1">;</span>
+            <span class="s5">case </span><span class="s3">'*'</span><span class="s1">:</span>
+                <span class="s1">result = prev * current;</span>
+                <span class="s5">break</span><span class="s1">;</span>
+            <span class="s5">case </span><span class="s3">'/'</span><span class="s1">:</span>
+                <span class="s1">result = prev / current;</span>
+                <span class="s5">break</span><span class="s1">;</span>
+            <span class="s5">default</span><span class="s1">:</span>
+                <span class="s5">return</span><span class="s1">;</span>
+        <span class="s1">}</span>
+        <span class="s1">currentInput = result;</span>
+        <span class="s1">operation = </span><span class="s3">''</span><span class="s1">;</span>
+        <span class="s1">previousInput = </span><span class="s3">''</span><span class="s1">;</span>
+        <span class="s1">updateDisplay();</span>
+    <span class="s1">}</span>
+
+    <span class="s5">function </span><span class="s1">updateDisplay() {</span>
+        <span class="s1">document.getElementById(</span><span class="s3">'display'</span><span class="s1">).value = currentInput;</span>
+    <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
