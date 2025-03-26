@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>kiểm tra nhiệt độ.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #cf8e6d;}
+.s6 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+kiểm tra nhiệt độ.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+  <span class="s4">// Lấy thông tin nhiệt độ từ người dùng</span>
+  <span class="s5">var </span><span class="s1">nhietDo = parseFloat(prompt(</span><span class="s3">&quot;Nhập nhiệt độ hiện tại:&quot;</span><span class="s1">));</span>
+
+  <span class="s4">// Kiểm tra nhiệt độ và đưa ra thông báo</span>
+  <span class="s5">if </span><span class="s1">(nhietDo &gt; </span><span class="s6">100</span><span class="s1">) {</span>
+    <span class="s1">alert(</span><span class="s3">&quot;Nhiệt độ quá cao! Vui lòng giảm nhiệt độ.&quot;</span><span class="s1">);</span>
+  <span class="s1">} </span><span class="s5">else if </span><span class="s1">(nhietDo &lt; </span><span class="s6">20</span><span class="s1">) {</span>
+    <span class="s1">alert(</span><span class="s3">&quot;Nhiệt độ quá thấp! Vui lòng tăng nhiệt độ.&quot;</span><span class="s1">);</span>
+  <span class="s1">} </span><span class="s5">else </span><span class="s1">{</span>
+    <span class="s1">alert(</span><span class="s3">&quot;Nhiệt độ hiện tại là hợp lý.&quot;</span><span class="s1">);</span>
+  <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span>
+
+</pre>
+</body>
+</html>
