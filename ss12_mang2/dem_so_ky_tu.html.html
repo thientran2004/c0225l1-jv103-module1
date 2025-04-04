@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>dem_so_ky_tu.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+.s5 { color: #cf8e6d;}
+.s6 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+dem_so_ky_tu.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;h1&gt;</span><span class="s1">Đếm Ký Tự Số Trong Mảng Ký Tự</span><span class="s0">&lt;/h1&gt;</span>
+<span class="s0">&lt;script&gt;</span>
+  <span class="s4">// Khai báo mảng ký tự</span>
+  <span class="s5">const </span><span class="s1">charArray = [</span><span class="s3">'a'</span><span class="s1">, </span><span class="s3">'b'</span><span class="s1">, </span><span class="s3">'1'</span><span class="s1">, </span><span class="s3">'2'</span><span class="s1">, </span><span class="s3">'c'</span><span class="s1">, </span><span class="s3">'3'</span><span class="s1">, </span><span class="s3">'d'</span><span class="s1">, </span><span class="s3">'4'</span><span class="s1">, </span><span class="s3">'e'</span><span class="s1">, </span><span class="s3">'5'</span><span class="s1">];</span>
+
+  <span class="s4">// Lấy kích thước của mảng</span>
+  <span class="s5">const </span><span class="s1">size = charArray.length;</span>
+
+  <span class="s4">// Hàm đếm số ký tự số</span>
+  <span class="s5">function </span><span class="s1">countDigits(array) {</span>
+    <span class="s5">let </span><span class="s1">count = </span><span class="s6">0</span><span class="s1">;</span>
+    <span class="s5">for </span><span class="s1">(</span><span class="s5">let </span><span class="s1">char of array) {</span>
+      <span class="s5">if </span><span class="s1">(char &gt;= </span><span class="s3">'0' </span><span class="s1">&amp;&amp; char &lt;= </span><span class="s3">'9'</span><span class="s1">) {</span>
+        <span class="s1">count++;</span>
+      <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s5">return </span><span class="s1">count;</span>
+  <span class="s1">}</span>
+
+  <span class="s4">// Đếm số ký tự số</span>
+  <span class="s5">const </span><span class="s1">digitCount = countDigits(charArray);</span>
+
+  <span class="s4">// Hiển thị kết quả</span>
+  <span class="s1">document.write(</span><span class="s3">`&lt;p&gt;Kích thước của mảng: </span><span class="s1">${size}</span><span class="s3">&lt;/p&gt;`</span><span class="s1">);</span>
+  <span class="s1">document.write(</span><span class="s3">`&lt;p&gt;Số ký tự số trong mảng: </span><span class="s1">${digitCount}</span><span class="s3">&lt;/p&gt;`</span><span class="s1">);</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
