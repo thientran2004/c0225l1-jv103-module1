@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Xay_dung_lop_mo_ta_hcn.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Xay_dung_lop_mo_ta_hcn.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;canvas </span><span class="s2">id </span><span class="s3">= &quot;rectangleCanvas&quot; </span><span class="s2">width </span><span class="s3">= 400 </span><span class="s2">height</span><span class="s3">=&quot;100&quot;</span><span class="s0">&gt;&lt;/canvas&gt;</span>
+<span class="s0">&lt;script&gt;</span>
+    <span class="s4">class </span><span class="s1">Rectangle {</span>
+        <span class="s1">constructor(length, width) {</span>
+            <span class="s4">this</span><span class="s1">.length = length;</span>
+            <span class="s4">this</span><span class="s1">.width = width;</span>
+        <span class="s1">}</span>
+        <span class="s1">getArea() {</span>
+            <span class="s4">return this</span><span class="s1">.length * </span><span class="s4">this</span><span class="s1">.width;</span>
+        <span class="s1">}</span>
+        <span class="s1">getPerimeter() {</span>
+            <span class="s4">return </span><span class="s1">(</span><span class="s4">this</span><span class="s1">.length + </span><span class="s4">this</span><span class="s1">.width) * </span><span class="s5">2</span><span class="s1">;</span>
+        <span class="s1">}</span>
+        <span class="s1">draw(rectangleCanvas) {</span>
+            <span class="s4">const </span><span class="s1">canvas = document.getElementById(rectangleCanvas);</span>
+            <span class="s4">const </span><span class="s1">ctx = canvas.getContext(</span><span class="s3">'2d'</span><span class="s1">);</span>
+            <span class="s1">ctx.clearRect(</span><span class="s5">0</span><span class="s1">, </span><span class="s5">0</span><span class="s1">, canvas.width, canvas.height);</span>
+            <span class="s1">ctx.fillStyle = </span><span class="s3">'lightblue'</span><span class="s1">;</span>
+            <span class="s1">ctx.fillRect(</span><span class="s5">50</span><span class="s1">, </span><span class="s5">50</span><span class="s1">, </span><span class="s4">this</span><span class="s1">.width, </span><span class="s4">this</span><span class="s1">.length);</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+    <span class="s4">const </span><span class="s1">rectangle = </span><span class="s4">new </span><span class="s1">Rectangle(</span><span class="s5">200</span><span class="s1">, </span><span class="s5">100</span><span class="s1">);</span>
+    <span class="s1">rectangle.draw(</span><span class="s3">'rectangleCanvas'</span><span class="s1">);</span>
+
+    <span class="s1">rectangle.length = </span><span class="s5">150</span><span class="s1">;</span>
+    <span class="s1">rectangle.width = </span><span class="s5">75</span><span class="s1">;</span>
+    <span class="s1">rectangle.draw(</span><span class="s3">'rectangleCanvas'</span><span class="s1">);</span>
+
+    <span class="s1">console.log(</span><span class="s3">&quot;Diện tích mới:&quot;</span><span class="s1">, rectangle.getArea());</span>
+    <span class="s1">console.log(</span><span class="s3">&quot;Chu vi mới:&quot;</span><span class="s1">, rectangle.getPerimeter());</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
