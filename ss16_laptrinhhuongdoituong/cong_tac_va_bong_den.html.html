@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>cong_tac_va_bong_den.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+cong_tac_va_bong_den.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;p </span><span class="s2">id</span><span class="s3">=&quot;result&quot;</span><span class="s0">&gt;&lt;/p&gt;</span>
+<span class="s0">&lt;script&gt;</span>
+  <span class="s4">class </span><span class="s1">ElectricLamp {</span>
+    <span class="s1">constructor(status) {</span>
+      <span class="s4">this</span><span class="s1">.status = status;</span>
+    <span class="s1">}</span>
+    <span class="s1">getStatus() {</span>
+      <span class="s4">return this</span><span class="s1">.status;</span>
+    <span class="s1">}</span>
+  <span class="s1">}</span>
+  <span class="s4">class </span><span class="s1">SwitchButton{</span>
+    <span class="s1">constructor(lamp, status) {</span>
+      <span class="s4">this</span><span class="s1">.lamp = lamp;</span>
+      <span class="s4">this</span><span class="s1">.status = status;</span>
+    <span class="s1">}</span>
+    <span class="s1">getlamp() {</span>
+      <span class="s4">return this</span><span class="s1">.lamp;</span>
+    <span class="s1">}</span>
+    <span class="s1">setlamp() {</span>
+      <span class="s4">this</span><span class="s1">.lamp = lamp;</span>
+    <span class="s1">}</span>
+    <span class="s1">connectToLamp(Electriclamp){</span>
+      <span class="s4">return this</span><span class="s1">.lamp = Electriclamp;</span>
+    <span class="s1">}</span>
+    <span class="s1">switchOff(){</span>
+      <span class="s4">this</span><span class="s1">.lamp = </span><span class="s4">false</span><span class="s1">;</span>
+      <span class="s4">this</span><span class="s1">.status = </span><span class="s4">false</span><span class="s1">;</span>
+      <span class="s4">return this</span><span class="s1">.status = </span><span class="s4">false</span><span class="s1">;</span>
+    <span class="s1">}</span>
+    <span class="s1">switchOn(){</span>
+      <span class="s4">this</span><span class="s1">.lamp = </span><span class="s4">true</span><span class="s1">;</span>
+      <span class="s4">this</span><span class="s1">.status = </span><span class="s4">true</span><span class="s1">;</span>
+      <span class="s4">return this</span><span class="s1">.status = </span><span class="s4">true</span><span class="s1">;</span>
+    <span class="s1">}</span>
+  <span class="s1">}</span>
+  <span class="s4">const </span><span class="s1">electriclamp_1 = </span><span class="s4">new </span><span class="s1">ElectricLamp(</span><span class="s4">false</span><span class="s1">);</span>
+  <span class="s4">const </span><span class="s1">switchbutton_1 = </span><span class="s4">new </span><span class="s1">SwitchButton(electriclamp_1, </span><span class="s4">false</span><span class="s1">);</span>
+  <span class="s1">console.log(switchbutton_1.switchOn());</span>
+  <span class="s1">console.log(electriclamp_1.getStatus());</span>
+  <span class="s1">console.log(switchbutton_1.switchOff());</span>
+  <span class="s1">console.log(electriclamp_1.getStatus());</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
