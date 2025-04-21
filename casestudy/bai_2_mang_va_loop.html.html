@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>bai_2_mang_va_loop.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+bai_2_mang_va_loop.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;h1&gt;</span><span class="s1">Tìm Kiếm Phần Tử Thiếu</span><span class="s0">&lt;/h1&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;arrayA&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;Nhập mảng A (vd: 7,2,5,3)&quot; </span><span class="s0">/&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;arrayB&quot; </span><span class="s2">placeholder</span><span class="s3">=&quot;Nhập mảng B (vd: 7,2,5,4,6,3)&quot; </span><span class="s0">/&gt;</span>
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">findMissingValues()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Tìm Kiếm</span><span class="s0">&lt;/button&gt;</span>
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;result&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+  <span class="s4">function </span><span class="s1">findMissingValues() {</span>
+    <span class="s4">const </span><span class="s1">A = document.getElementById(</span><span class="s3">'arrayA'</span><span class="s1">).value.split(</span><span class="s3">','</span><span class="s1">).map(Number);</span>
+    <span class="s4">const </span><span class="s1">B = document.getElementById(</span><span class="s3">'arrayB'</span><span class="s1">).value.split(</span><span class="s3">','</span><span class="s1">).map(Number);</span>
+    <span class="s4">const </span><span class="s1">setA = </span><span class="s4">new </span><span class="s1">Set(A);</span>
+    <span class="s4">const </span><span class="s1">result = [...</span><span class="s4">new </span><span class="s1">Set(B.filter(num =&gt; !setA.has(num)))].sort((a, b) =&gt; a - b);</span>
+
+    <span class="s1">document.getElementById(</span><span class="s3">'result'</span><span class="s1">).textContent =</span>
+            <span class="s3">`Kết quả: [</span><span class="s1">${result.join(</span><span class="s3">', '</span><span class="s1">)}</span><span class="s3">]`</span><span class="s1">;</span>
+  <span class="s1">}</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
