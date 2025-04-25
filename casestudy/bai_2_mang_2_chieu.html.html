@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>bai_2_mang_2_chieu.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+.s5 { color: #cf8e6d;}
+.s6 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+bai_2_mang_2_chieu.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;h1&gt;</span><span class="s1">Liệt kê và đếm số nguyên tố trong mảng 2 chiều</span><span class="s0">&lt;/h1&gt;</span>
+<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;rows&quot;</span><span class="s0">&gt;</span><span class="s1">Số hàng (m): </span><span class="s0">&lt;/label&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;number&quot; </span><span class="s2">id</span><span class="s3">=&quot;rows&quot; </span><span class="s2">min</span><span class="s3">=&quot;1&quot; </span><span class="s2">required</span><span class="s0">&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;cols&quot;</span><span class="s0">&gt;</span><span class="s1">Số cột (n): </span><span class="s0">&lt;/label&gt;</span>
+<span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;number&quot; </span><span class="s2">id</span><span class="s3">=&quot;cols&quot; </span><span class="s2">min</span><span class="s3">=&quot;1&quot; </span><span class="s2">required</span><span class="s0">&gt;</span>
+<span class="s0">&lt;br&gt;</span>
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">createMatrix()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Nhập mảng</span><span class="s0">&lt;/button&gt;</span>
+
+<span class="s0">&lt;div </span><span class="s2">id</span><span class="s3">=&quot;matrixInputs&quot; </span><span class="s2">style</span><span class="s3">=&quot;</span><span class="s2">margin-top</span><span class="s1">: </span><span class="s4">20</span><span class="s3">px</span><span class="s1">;</span><span class="s3">&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">findPrimes()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Liệt kê số nguyên tố</span><span class="s0">&lt;/button&gt;</span>
+
+<span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;result&quot; </span><span class="s2">id</span><span class="s3">=&quot;result&quot;</span><span class="s0">&gt;&lt;/div&gt;</span>
+
+<span class="s0">&lt;script&gt;</span>
+  <span class="s5">let </span><span class="s1">matrix = [];</span>
+
+  <span class="s5">function </span><span class="s1">createMatrix() {</span>
+    <span class="s5">const </span><span class="s1">rows = document.getElementById(</span><span class="s3">'rows'</span><span class="s1">).value;</span>
+    <span class="s5">const </span><span class="s1">cols = document.getElementById(</span><span class="s3">'cols'</span><span class="s1">).value;</span>
+    <span class="s1">matrix = []; </span><span class="s6">// Reset matrix</span>
+
+    <span class="s5">let </span><span class="s1">matrixInputs = document.getElementById(</span><span class="s3">'matrixInputs'</span><span class="s1">);</span>
+    <span class="s1">matrixInputs.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+
+    <span class="s5">for </span><span class="s1">(</span><span class="s5">let </span><span class="s1">i = </span><span class="s4">0</span><span class="s1">; i &lt; rows; i++) {</span>
+      <span class="s5">let </span><span class="s1">rowInputs = </span><span class="s3">`&lt;div&gt;`</span><span class="s1">;</span>
+      <span class="s5">for </span><span class="s1">(</span><span class="s5">let </span><span class="s1">j = </span><span class="s4">0</span><span class="s1">; j &lt; cols; j++) {</span>
+        <span class="s1">rowInputs += </span><span class="s3">`&lt;input type=&quot;number&quot; placeholder=&quot;a[</span><span class="s1">${i}</span><span class="s3">][</span><span class="s1">${j}</span><span class="s3">]&quot; required&gt;`</span><span class="s1">;</span>
+      <span class="s1">}</span>
+      <span class="s1">rowInputs += </span><span class="s3">`&lt;/div&gt;`</span><span class="s1">;</span>
+      <span class="s1">matrixInputs.innerHTML += rowInputs;</span>
+    <span class="s1">}</span>
+  <span class="s1">}</span>
+
+  <span class="s5">function </span><span class="s1">isPrime(num) {</span>
+    <span class="s5">if </span><span class="s1">(num &lt;= </span><span class="s4">1</span><span class="s1">) </span><span class="s5">return false</span><span class="s1">;</span>
+    <span class="s5">for </span><span class="s1">(</span><span class="s5">let </span><span class="s1">i = </span><span class="s4">2</span><span class="s1">; i &lt;= Math.sqrt(num); i++) {</span>
+      <span class="s5">if </span><span class="s1">(num % i === </span><span class="s4">0</span><span class="s1">) </span><span class="s5">return false</span><span class="s1">;</span>
+    <span class="s1">}</span>
+    <span class="s5">return true</span><span class="s1">;</span>
+  <span class="s1">}</span>
+
+  <span class="s5">function </span><span class="s1">findPrimes() {</span>
+    <span class="s5">const </span><span class="s1">inputs = document.querySelectorAll(</span><span class="s3">'#matrixInputs input'</span><span class="s1">);</span>
+    <span class="s5">let </span><span class="s1">primes = [];</span>
+    <span class="s5">let </span><span class="s1">index = </span><span class="s4">0</span><span class="s1">;</span>
+
+    <span class="s5">const </span><span class="s1">rows = document.getElementById(</span><span class="s3">'rows'</span><span class="s1">).value;</span>
+    <span class="s5">const </span><span class="s1">cols = document.getElementById(</span><span class="s3">'cols'</span><span class="s1">).value;</span>
+
+    <span class="s5">for </span><span class="s1">(</span><span class="s5">let </span><span class="s1">i = </span><span class="s4">0</span><span class="s1">; i &lt; rows; i++) {</span>
+      <span class="s5">for </span><span class="s1">(</span><span class="s5">let </span><span class="s1">j = </span><span class="s4">0</span><span class="s1">; j &lt; cols; j++) {</span>
+        <span class="s5">const </span><span class="s1">value = parseInt(inputs[index].value);</span>
+        <span class="s5">if </span><span class="s1">(isPrime(value)) {</span>
+          <span class="s1">primes.push(value);</span>
+        <span class="s1">}</span>
+        <span class="s1">index++;</span>
+      <span class="s1">}</span>
+    <span class="s1">}</span>
+
+    <span class="s1">document.getElementById(</span><span class="s3">'result'</span><span class="s1">).innerHTML =</span>
+            <span class="s3">`Số nguyên tố: </span><span class="s1">${primes.join(</span><span class="s3">', '</span><span class="s1">)}</span><span class="s3">&lt;br&gt;Số lượng: </span><span class="s1">${primes.length}</span><span class="s3">`</span><span class="s1">;</span>
+  <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
