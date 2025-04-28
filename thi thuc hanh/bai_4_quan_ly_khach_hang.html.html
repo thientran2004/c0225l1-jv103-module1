@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>bai_4_quan_ly_khach_hang.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+.s4 { color: #cf8e6d;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+bai_4_quan_ly_khach_hang.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;en&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Title</span><span class="s0">&lt;/title&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+<span class="s0">&lt;h1&gt;</span><span class="s1">Quản lý khách hàng</span><span class="s0">&lt;/h1&gt;</span>
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">addCustomers()</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Thêm khách hàng</span><span class="s0">&lt;/button&gt;</span>
+<span class="s0">&lt;button </span><span class="s2">onclick</span><span class="s3">=&quot;</span><span class="s1">displayCustomers</span><span class="s3">&quot;</span><span class="s0">&gt;</span><span class="s1">Hiển thị khách hàng</span><span class="s0">&lt;/button&gt;</span>
+<span class="s0">&lt;talbe </span><span class="s2">id</span><span class="s3">=&quot;customerTable&quot;</span><span class="s0">&gt;</span>
+  <span class="s0">&lt;thead&gt;</span>
+  <span class="s0">&lt;tr&gt;</span>
+    <span class="s0">&lt;th&gt;</span><span class="s1">Mã khách hàng</span><span class="s0">&lt;/th&gt;</span>
+    <span class="s0">&lt;th&gt;</span><span class="s1">Tên khách hàng</span><span class="s0">&lt;/th&gt;</span>
+    <span class="s0">&lt;th&gt;</span><span class="s1">Số điện thoại khách hàng</span><span class="s0">&lt;/th&gt;</span>
+    <span class="s0">&lt;th&gt;</span><span class="s1">Địa chỉ khách hàng</span><span class="s0">&lt;/th&gt;</span>
+    <span class="s0">&lt;th&gt;</span><span class="s1">Email khách hàng</span><span class="s0">&lt;/th&gt;</span>
+  <span class="s0">&lt;/tr&gt;</span>
+  <span class="s0">&lt;/thead&gt;</span>
+  <span class="s0">&lt;tbody&gt;</span>
+  <span class="s0">&lt;/tbody&gt;</span>
+<span class="s0">&lt;/talbe&gt;</span>
+<span class="s0">&lt;script&gt;</span>
+  <span class="s4">let </span><span class="s1">customers = [];</span>
+  <span class="s4">function </span><span class="s1">displayCustomers() {</span>
+     <span class="s4">const </span><span class="s1">tableBody = document.querySelector(</span><span class="s3">'#customerTable tbody'</span><span class="s1">);</span>
+     <span class="s1">tableBody.innerHTML = </span><span class="s3">''</span><span class="s1">;</span>
+    <span class="s1">customers.forEach((customers, index) =&gt; {</span>
+      <span class="s4">const </span><span class="s1">row = tableBody.insertRow();</span>
+      <span class="s1">row.innerHTML = </span><span class="s3">`</span>
+       <span class="s3">&lt;td&gt;</span><span class="s1">${customers.id}</span><span class="s3">&lt;/td&gt; 
+       &lt;td&gt;</span><span class="s1">${customers.name}</span><span class="s3">&lt;/td&gt; 
+       &lt;td&gt;</span><span class="s1">${customers.phonenumber}</span><span class="s3">&lt;/td&gt; 
+       &lt;td&gt;</span><span class="s1">${customers.location}</span><span class="s3">&lt;/td&gt; 
+       &lt;td&gt;</span><span class="s1">${customers.email}</span><span class="s3">&lt;/td&gt; 
+`</span>
+    <span class="s1">});</span>
+  <span class="s1">}</span>
+  <span class="s4">function </span><span class="s1">addCustomers() {</span>
+    <span class="s4">const </span><span class="s1">id = prompt(</span><span class="s3">&quot;Nhập mã khách hàng:&quot;</span><span class="s1">);</span>
+    <span class="s4">const </span><span class="s1">name = prompt(</span><span class="s3">&quot;Nhập tên khách hàng:&quot;</span><span class="s1">);</span>
+    <span class="s4">const </span><span class="s1">phonenumber = prompt(</span><span class="s3">&quot;Nhập số điện thoại:&quot;</span><span class="s1">);</span>
+    <span class="s4">const </span><span class="s1">location = prompt(</span><span class="s3">&quot;Nhập địa chỉ:&quot;</span><span class="s1">);</span>
+    <span class="s4">const </span><span class="s1">email = prompt(</span><span class="s3">&quot;Nhập email:&quot;</span><span class="s1">);</span>
+
+    <span class="s4">const </span><span class="s1">customer = {id, name, phonenumber, location, email};</span>
+    <span class="s1">customers.push(customer);</span>
+    <span class="s1">displayCustomers();</span>
+  <span class="s1">}</span>
+  <span class="s4">function </span><span class="s1">editCustomers() {</span>
+    <span class="s4">const </span><span class="s1">updateName = prompt(</span><span class="s3">&quot;Nhập tên khách hàng mới: &quot;</span><span class="s1">, customers[index].name);</span>
+    <span class="s1">customers[index].id = prompt(</span><span class="s3">&quot;Nhập id khách hàng mới: &quot;</span><span class="s1">, customers[index].id);</span>
+    <span class="s1">customers[index].name = prompt(</span><span class="s3">&quot;Nhập id khách hàng mới: &quot;</span><span class="s1">, customers[index].name);</span>
+    <span class="s1">customers[index].phonenumber = prompt(</span><span class="s3">&quot;Nhập id khách hàng mới: &quot;</span><span class="s1">, customers[index].phonenumber);</span>
+    <span class="s1">customers[index].location = prompt(</span><span class="s3">&quot;Nhập id khách hàng mới: &quot;</span><span class="s1">, customers[index].location);</span>
+    <span class="s1">customers[index].email = prompt(</span><span class="s3">&quot;Nhập id khách hàng mới: &quot;</span><span class="s1">, customers[index].email);</span>
+    <span class="s1">displayCustomers();</span>
+  <span class="s1">}</span>
+  <span class="s4">function </span><span class="s1">deleteCustomers(index) {</span>
+    <span class="s4">if</span><span class="s1">(confirm(</span><span class="s3">`Bạn có chắc muốn xoá học viên với mã </span><span class="s1">${customer[index].id}</span><span class="s3">?`</span><span class="s1">)) {</span>
+      <span class="s1">customers.splice(index, </span><span class="s5">1</span><span class="s1">);</span>
+      <span class="s1">displayCustomers();</span>
+    <span class="s1">}</span>
+  <span class="s1">}</span>
+<span class="s0">&lt;/script&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
